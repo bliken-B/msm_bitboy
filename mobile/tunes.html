@@ -80,7 +80,30 @@
 
 
   </div>
-<script src="js/<?php echo  strtolower($params['q']);?>.js"></script>
+<script>
+  //create a function to get url parameters
+  function getURLParameter(name) {
+    return decodeURI(
+      (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1]
+    );
+  }
+  //get the value of the parameter
+  var param = getURLParameter('tunes');
+  //if the parameter is not null
+  if (param !== null) {
+    //split the parameter value into an array
+    var tunes = param.split(',');
+    //loop through the array
+    for (var i = 0; i < tunes.length; i++) {
+      //create a new audio element
+      var audio = document.createElement('script');
+      //set the source of the audio element to the value of the array item
+      audio.src = ".js/"+tunes[i]+".js";
+      //append the audio element to the body
+      document.body.appendChild(audio);
+    }
+  }
+</script>
 
   <script src="js/scriptde4music.js"></script>
 </body>
