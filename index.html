@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playtunes by Mayhe</title>
+  <link rel="stylesheet" href="stylede4music.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+  <div class="wrapper">
+
+        <div class="top-bar">
+          <div class="optoptions">
+          <i class="material-icons">expand_more</i>
+          </div>
+          <span>Now Playing</span>
+          <i class="material-icons">more_horiz</i>
+        </div>
+        <div class="img-area">
+          <img src="https://lh3.googleusercontent.com/fife/AAbDypD6qO0afzI57q7UFrOpz9CauRCzjtrMS9W_niVprivG6lGmNqNsoGxSCieYgeI0PlUb0Mz61Q9T0oiV0An-x7vebhJU1dATP33Ep_CxPs7GSoHq3itvuKRzGt1Q_xM1rI8ACmRA8gDam4OXVvPG2Ky2b5qqXVtH6-Ix6M6tSeQVPw9ENGvxZV-QZlkU7u1PuIiOOoaNsD77rF4uvZbr3nug1AL1czYAU4GGxQaCvOmg-VcrN5OxSKjjCOaPsv0jvTwMTytichvDBLAir3w4nvgkHir3lHBjUepce2DfC8IM5N66ER26Lm4aSsra9pFx9V2skIMP7vHEiPX62aQo_45LUtbVGAsejtaDBPst9RvK7dBpYI5hAiawS05e4D5B8mbBnKYvfIBg3-U9ZEjKdNuC9UAwElXKnBMp1VrI76uhfYyroTQ6OnWdjjXoK1tYMyud2v0DFZc77iVGGDPH5luwPyf1RXTQU3LZz3y_EppJWJQ2Sb0N54goIAT-GFdrKSrPLzBs6rR0sgCjMvJZbskWvkIYiwT1cOXXnDa-ts-TX2lOcJe7HbBvDrVDPiVuJdMM5Ii5fm0B-jAqHJCtcTyakUT8uRHW6OEJDI5r85jtwlr92jtntZXeXlZoT-RoqMRJ4cYO3F2epQGH-Jron44vrBDFRCNZmxVPK2yQdKB32-WYTpam8mtu0MlM8TpKuDlNBHdzdYk3Kf-vuhG9emMUvjGu25HdXJ2OcOSzckiMo1R9AFuQNBCfHMLvMHih5s5WeGB9JeSA-TNEWv_QZhr9mybFuTx-t--CE12uNz7CaXQqnz8p918Y3pb1yVIHgPVT-3IOxxdblUC6Oz_Ie89WFUyrtIisLiaUahYkduRYyU694FHShaiS7fKraE-6wkxlw63QavbliKfQx4h_pmOOuNy5wB_SPLuv3fhyu-BWTRwmofTguoKNz3ihuRJjIxRA1D1VMzW7paiT4jmlaKiVR17dEoc4s9E6-NrpAV3ixnGQ10JWrfPuBEUaljPyzFtKknm2cU_FJinlNQMZabwG8d6CVQicmgFwbq3c2VusE76LbF8nL4sZ2NKzpRfQl-gn7f78eMp2eBmoZddVruKTRsNeicrnZmQ4XVCnuhWoVQFItlMPKmsParOuJSnOzssXyo4yLOSiKOL2EKj1-z1CFUqMandXbvpfq1Wrzw9VH4TX745CjQo02rnJC1OKoITJM7owKWe43PLf7r4E4LyW9R3VZuZf9Jy4C7ASjZiuRBAqtnmnw-ZcRq3wSJDTNsUY5dNX_qdxZrk64lhgROEfQVr7AOD51e1_mkSjCR8oNQ-qSjTcyd9xOALUlsHwqz4lwrQVRywKS5el3suT3ysPNb7Gd8brtzyVMTYJHa8RqgMHUSQuf2lx37fj_9wJBwi5_L4a54W38NmII0T35L6UWNXqTdNoZdXpkAOZlyAlH_KjP6VjzmjwhXPyyaa7Ole2Z5xRajVm11MQbbZY1eQYa3UsqMyzadVp-uvA1QkH8RRCzUk=w1366-h657" alt="">
+        </div>
+        <div class="song-details">
+          <marquee class="name" scrolldelay="112"></marquee>
+
+          <p class="artist"></p>
+        </div>
+        <div class="progress-area">
+          <div class="progress-bar">
+            <audio id="main-audio" src=""></audio>
+          </div>
+          <div class="song-timer">
+            <span class="current-time">0:00</span>
+            <span class="max-duration">0:00</span>
+          </div>
+        </div>
+        <div class="controls">
+          <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+          <i id="prev" class="material-icons">skip_previous</i>
+          <div class="play-pause">
+            <i class="material-icons play">play_arrow</i>
+          </div>
+          <i id="next" class="material-icons">skip_next</i>
+          <i id="more-music" class="material-icons">queue_music</i>
+        </div>
+        <div class="music-list">
+          <div class="header">
+            <div class="row">
+              <i class= "list material-icons">queue_music</i>
+              <span>Tunes list</span>
+            </div>
+            <i id="close" class="material-icons">close</i>
+          </div>
+          <ul>
+          
+          </ul>
+        </div>
+        <style type="text/css">
+          .option-list{
+            position: absolute;
+            pointer-events: all;
+            opacity: 0;
+          }
+          .option-list .Showw{
+            opacity: 1;
+          }
+        </style> 
+        <div class="option-list" id="DSLKhjd">  
+            <div class="row">
+              <span>Advanced Options</span>
+              <button id="WEOLKJh" onclick="mfinc('DSLKhjd')"style="border:none;background:inherit; float: right;"><i class="material-icons">close</i></button>
+              <script>
+
+
+              </script>
+            </div>    
+          <ul>
+          
+          </ul>
+        </div>
+      </div>
+
+
+  </div>
+
+  <script src="js/post_malone.js"></script>
+  <script src="js/scriptde4music.js"></script>
+
+</body>
+
+</html>
+
+
+
